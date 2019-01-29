@@ -34,7 +34,12 @@ def create_menu():
 
 def add_book():
     new_book = ui.get_book_info()
-    store.add_book(new_book)
+    all_books = store.get_all_books()
+    if new_book in all_books:
+        ui.message('The book already exists')
+    else:
+        store.add_book(new_book)
+        ui.message('New book Added!')
     # TODO show an error message if a book is already in the store, don't add book
 
 
@@ -71,7 +76,7 @@ def change_read():
     else
         new_read = ui.get_read_value()
         store.set_book_read(book_id, new_read)
-        
+
 
     # TODO show error message if book's ID is not found.
 
