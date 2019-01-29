@@ -64,6 +64,11 @@ def search_book():
 def change_read():
 
     book_id = ui.get_book_id()
+try:
+    book = store.get_book(book_id)
+except:
+    ui.message('The book is not in Store!')
+else:
     new_read = ui.get_read_value()
     store.set_book_read(book_id, new_read)
     # TODO show error message if book's ID is not found.
