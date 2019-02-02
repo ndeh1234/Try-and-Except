@@ -1,5 +1,5 @@
-frombookstore
-import BookStore
+from bookstore import BookStore
+                
 from menu import Menu
 import ui
 
@@ -77,7 +77,7 @@ def change_read():
         book = store.get_book(book_id)
     except:
         ui.message('The book is not in Store!')
-    else
+    else:
         new_read = ui.get_read_value()
         store.set_book_read(book_id, new_read)
 
