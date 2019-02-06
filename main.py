@@ -42,7 +42,7 @@ def add_book():
         ui.message('New book Added!')
     # TODO show an error message if a book is already in the store, don't add book
 
-q
+
 def show_read_books():
     read_books = store.get_books_by_read_value(True)
     print("\n")  # adding blank line before list of books
