@@ -78,10 +78,9 @@ def change_read():
     except:                            # If book is not found or the book_id is incorrect etc, then the 'except' block will be executed
         ui.message('The book is not in Store!')
     else:                              #else as the book name will be retrieved from the store
-                                       #it will be certain that the book exists, hence the book_read_value() will be retrieved.
+                                       #it will be crtain that the book exists, hence the book_read_value() will be retrieved.
         new_read = ui.get_read_value()
         store.set_book_read(book_id, new_read)
-
 
     # TODO show error message if book's ID is not found.
 
